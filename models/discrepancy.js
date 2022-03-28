@@ -7,7 +7,7 @@ const Discrepancy = new Schema(
     date: { type: String, required: true },
     aircraft: { type: String, required: true },
     description: { type: String, required: true },
-    open: { type: Boolean, required: true },
+    open: { type: Boolean, required: false },
     section: { type: String, required: false },
     image: { type: String, required: false }
   },
