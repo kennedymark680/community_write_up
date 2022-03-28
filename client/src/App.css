@@ -1,0 +1,10 @@
+.App {
+  display: flex;
+  background-color: rgb(16, 16, 16);
+}
+
+nav {
+  width: 100vw;
+  height: 75px;
+  background-color: #c4c4c3;
+}
