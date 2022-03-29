@@ -17,9 +17,8 @@ const ListInSection = (props) => {
         <button>Discrep?</button>
       </Link>
       {props.searchResults.map((dis) => (
-        <Link to={`/Details/${dis._id}`}>
+        <Link key={dis._id} to={`/Details/${dis._id}`}>
           <Card
-            key={dis._id}
             id={dis._id}
             title={dis.title}
             date={dis.date}

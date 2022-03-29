@@ -4,6 +4,7 @@ import './App.css'
 import Home from './pages/Home'
 import ListInSection from './pages/List_in_Section'
 import DiscrepancyForm from './pages/Discrepancy_Form'
+import Details from './pages/Details'
 import axios from 'axios'
 
 function App() {
@@ -94,7 +95,7 @@ function App() {
             />
           }
         />
-        <Route path="/Details/:id" />
+        <Route path="/Details/:id" element={<Details />} />
         <Route
           path="/Discrepancy/:id"
           element={
