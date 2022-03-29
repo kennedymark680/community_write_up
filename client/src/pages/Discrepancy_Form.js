@@ -1,4 +1,4 @@
-const DiscrepancyForm = () => {
+const DiscrepancyForm = (props) => {
   return (
     <div>
       <section className="input-section">
@@ -7,66 +7,61 @@ const DiscrepancyForm = () => {
           type="text"
           name="title"
           placeholder="title"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.title}
+          onChange={props.handleChange}
         />
         <input
           className="form"
           type="text"
           name="date"
           placeholder="Date"
-          // value={props.name}
-          // onChange={props.handleChange}
-        />
-        <input
-          className="form"
-          type="text"
-          name="aircraft"
-          placeholder="Title"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.date}
+          onChange={props.handleChange}
         />
         <input
           className="form"
           type="text"
           name="aircraft"
           placeholder="Tail Number"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.aircraft}
+          onChange={props.handleChange}
         />
         <input
           className="form"
           type="text"
           name="description"
           placeholder="Description"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.description}
+          onChange={props.handleChange}
         />
         <input
           className="form"
           type="text"
           name="open"
           placeholder="Open?"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.open}
+          onChange={props.handleChange}
         />
         <input
           className="form"
           type="text"
           name="section"
           placeholder="Section"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.section}
+          onChange={props.handleChange}
         />
         <input
           className="form"
           type="text"
           name="image"
           placeholder="Image"
-          // value={props.name}
-          // onChange={props.handleChange}
+          value={props.image}
+          onChange={props.handleChange}
         />
-        <button>Submit</button>
+        <button onClick={() => props.submitNewDiscrep()}>Submit</button>
+        <button onClick={() => props.getDiscrep()}>Get</button>
+        <button onClick={() => props.deleteDiscrep()}>Delete</button>
+        <button onClick={() => props.updateDiscrep()}>Update</button>
       </section>
     </div>
   )
