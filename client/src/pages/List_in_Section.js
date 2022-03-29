@@ -17,17 +17,15 @@ const ListInSection = (props) => {
         <button>Discrep?</button>
       </Link>
       {props.searchResults.map((dis) => (
-        <Link key={dis._id} to={`/Details/${dis._id}`}>
-          <Card
-            id={dis._id}
-            title={dis.title}
-            date={dis.date}
-            image={dis.image}
-            open={dis.open}
-            deleteDiscrep={props.deleteDiscrep}
-            updateDiscrep={props.updateDiscrep}
-          />
-        </Link>
+        <Card
+          id={dis._id}
+          title={dis.title}
+          date={dis.date}
+          image={dis.image}
+          open={dis.open}
+          deleteDiscrep={props.deleteDiscrep}
+          updateDiscrep={props.updateDiscrep}
+        />
       ))}
     </div>
   )
