@@ -5,6 +5,7 @@ const Card = (props) => {
       <h3>{props.date}</h3>
       <h3>{props.image}</h3>
       <button onClick={() => props.deleteDiscrep(props.id)}>Delete</button>
+      <button onClick={() => props.updateDiscrep(props.id)}>{props.open}</button>
     </div>
   )
 }

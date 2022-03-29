@@ -41,8 +41,8 @@ function App() {
     console.log(res)
   }
 
-  const updateDiscrep = async () => {
-    const res = await axios.delete('http://localhost:3001/test')
+  const updateDiscrep = async (id) => {
+    const res = await axios.delete('http://localhost:3001/update/:id')
     console.log(res)
   }
 

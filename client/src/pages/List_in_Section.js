@@ -1,19 +1,18 @@
-import { useParams } from 'react-router-dom'
 import Card from '../components/Card.jsx'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 
 const ListInSection = (props) => {
-  let { aircraftId } = useParams()
+  let { id } = useParams()
 
   useEffect(() => {
-    props.getDiscrep(aircraftId)
+    props.getDiscrep(id)
   }, [])
 
   return (
     <div>
-      <button onClick={() => console.log(aircraftId)}>Test</button>
-      <Link to={`/Discrepancy/${aircraftId}`}>
+      <button onClick={() => console.log(id)}>Test</button>
+      <Link to={`/Discrepancy/${id}`}>
         <button>Discrep?</button>
       </Link>
       {props.searchResults.map((dis) => (
@@ -23,6 +22,7 @@ const ListInSection = (props) => {
           title={dis.title}
           date={dis.date}
           image={dis.image}
+          open={dis.open}
           deleteDiscrep={props.deleteDiscrep}
         />
       ))}
