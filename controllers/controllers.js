@@ -1,4 +1,5 @@
 const Discrepancy = require('../models/discrepancy')
+const Aircraft = require('../models/aircraft')
 
 const createDiscrepancy = async (req, res) => {
   try {

@@ -1,5 +1,6 @@
 const db = require('../db')
 const Discrepancy = require('../models/discrepancy')
+const Aircraft = require('../models/aircraft')
 
 const main = async () => {
   const discrepancy = [
@@ -21,6 +22,14 @@ const main = async () => {
       image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg'
     }
   ]
+
+  const aircraft = [
+    {
+      model: 'EC130'
+    }
+  ]
+
+  await Aircraft.insertMany(aircraft)
   await Discrepancy.insertMany(discrepancy)
   console.log('Discrepancies incoming!')
 }

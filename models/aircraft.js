@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Aircraft = new Schema(
   {
     model: { type: String, required: true },
-    tail_number: { type: String, required: true }
+    tail_number: { type: String, required: false }
   },
   { timestamps: true }
 )
