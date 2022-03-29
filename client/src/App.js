@@ -34,6 +34,7 @@ function App() {
     )
     console.log(res.data)
     setSearchResults(res.data)
+    console.log(searchResults)
   }
 
   const deleteDiscrep = async (id) => {
@@ -42,7 +43,7 @@ function App() {
   }
 
   const updateDiscrep = async (id) => {
-    const res = await axios.delete('http://localhost:3001/update/:id')
+    const res = await axios.delete(`http://localhost:3001/update/${id}`)
     console.log(res)
   }
 
@@ -87,6 +88,7 @@ function App() {
               searchResults={searchResults}
               getDiscrep={getDiscrep}
               deleteDiscrep={deleteDiscrep}
+              updateDiscrep={updateDiscrep}
             />
           }
         />

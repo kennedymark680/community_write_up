@@ -1,4 +1,8 @@
+import { useParams } from 'react-router-dom'
+
 const DiscrepancyForm = (props) => {
+  const { id } = useParams()
+
   return (
     <div>
       <section className="input-section">
@@ -66,11 +70,7 @@ const DiscrepancyForm = (props) => {
           value={props.image}
           onChange={props.handleDiscrepancyChange}
         />
-        <button
-          onClick={() => props.submitNewDiscrep('62431656a7fb4be52a53a850')}
-        >
-          Submit
-        </button>
+        <button onClick={() => props.submitNewDiscrep(id)}>Submit</button>
         <button onClick={() => props.getDiscrep()}>Get</button>
         <button onClick={() => props.deleteDiscrep()}>Delete</button>
         <button onClick={() => props.updateDiscrep()}>Update</button>

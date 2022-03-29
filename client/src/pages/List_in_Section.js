@@ -11,7 +11,6 @@ const ListInSection = (props) => {
 
   return (
     <div>
-      <button onClick={() => console.log(id)}>Test</button>
       <Link to={`/Discrepancy/${id}`}>
         <button>Discrep?</button>
       </Link>
@@ -24,6 +23,7 @@ const ListInSection = (props) => {
           image={dis.image}
           open={dis.open}
           deleteDiscrep={props.deleteDiscrep}
+          updateDiscrep={props.updateDiscrep}
         />
       ))}
     </div>
