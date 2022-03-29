@@ -9,7 +9,8 @@ const Discrepancy = new Schema(
     description: { type: String, required: true },
     open: { type: Boolean, required: false },
     section: { type: String, required: false },
-    image: { type: String, required: false }
+    image: { type: String, required: false },
+    aircraft: { type: Schema.Types.ObjectId, ref: 'Aircraft' }
   },
   { timestamps: true }
 )

@@ -58,6 +58,14 @@ const DiscrepancyForm = (props) => {
           value={props.image}
           onChange={props.handleDiscrepancyChange}
         />
+        <input
+          className="form"
+          type="text"
+          name="aircraft"
+          placeholder="Aircraft"
+          value={props.image}
+          onChange={props.handleDiscrepancyChange}
+        />
         <button onClick={() => props.submitNewDiscrep()}>Submit</button>
         <button onClick={() => props.getDiscrep()}>Get</button>
         <button onClick={() => props.deleteDiscrep()}>Delete</button>

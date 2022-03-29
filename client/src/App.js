@@ -2,11 +2,13 @@ import { Route, Routes } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './App.css'
 import Home from './pages/Home'
+import ListInSection from './pages/List_in_Section'
 import DiscrepancyForm from './pages/Discrepancy_Form'
 import axios from 'axios'
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
   const [formValue, setFormValue] = useState({
     title: '',
     date: '',
@@ -24,7 +26,7 @@ function App() {
 
   const getDiscrep = async () => {
     const res = await axios.get('http://localhost:3001/test')
-    console.log(res.data)
+    setSearchResults(res.data)
   }
 
   const deleteDiscrep = async () => {
@@ -72,7 +74,10 @@ function App() {
             />
           }
         />
-        <Route path="/List_in_Section" />
+        <Route
+          path="/List_in_Section"
+          element={<ListInSection searchResults={searchResults} />}
+        />
         <Route path="/Details" />
         <Route
           path="/Discrepancy"
