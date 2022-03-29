@@ -25,7 +25,7 @@ function App() {
       ...formValue,
       aircraft: id
     })
-    console.log('test')
+    console.log('Submitted')
   }
 
   const getDiscrep = async (aircraftId) => {
@@ -40,11 +40,13 @@ function App() {
   const deleteDiscrep = async (id) => {
     const res = await axios.delete(`http://localhost:3001/delete/${id}`)
     console.log(res)
+    getDiscrep(aircraftIds)
   }
 
   const updateDiscrep = async (id) => {
-    const res = await axios.delete(`http://localhost:3001/update/${id}`)
+    const res = await axios.put(`http://localhost:3001/update/${id}`)
     console.log(res)
+    getDiscrep(aircraftIds)
   }
 
   const handleDiscrepancyChange = (e) => {
