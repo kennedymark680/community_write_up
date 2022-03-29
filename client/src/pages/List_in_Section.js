@@ -1,6 +1,7 @@
 import Card from '../components/Card.jsx'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import Nav from '../components/Nav'
 
 const ListInSection = (props) => {
   let { id } = useParams()
@@ -11,6 +12,7 @@ const ListInSection = (props) => {
 
   return (
     <div>
+      <Nav />
       <Link to={`/Discrepancy/${id}`}>
         <button>Discrep?</button>
       </Link>

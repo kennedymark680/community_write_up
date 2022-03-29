@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
+import Nav from '../components/Nav'
 
 const Home = (props) => {
   return (
     <div>
-      <nav></nav>
+      <Nav />
       <img src="https://i.ibb.co/ry4zLrq/ec130.png" alt="ec130" border="0" />
       <input
         className="form"
