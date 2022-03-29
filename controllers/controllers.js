@@ -13,7 +13,7 @@ const createDiscrepancy = async (req, res) => {
 
 const getDiscrepancy = async (req, res) => {
   try {
-    const discrepancies = await Discrepancy.find()
+    const discrepancies = await Aircraft.find()
     return res.status(200).send(discrepancies)
   } catch (error) {
     return res.status(500).send(error.message)

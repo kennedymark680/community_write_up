@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const Home = (props) => {
   return (
     <div>
@@ -12,6 +14,9 @@ const Home = (props) => {
         onChange={props.handleSearchChange}
       />
       <button onClick={() => console.log('Searched')}>Search</button>
+      <Link to={`/list_in_section/${props.aircraftIds[0]}`}>
+        <button>EC130</button>
+      </Link>
     </div>
   )
 }

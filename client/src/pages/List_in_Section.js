@@ -1,5 +1,5 @@
-const ListInSection = ({ sear }) => {
-  return <div>{}</div>
+const ListInSection = (props) => {
+  return <div>{<button>Search</button>}</div>
 }
 
 export default ListInSection

@@ -7,6 +7,7 @@ import DiscrepancyForm from './pages/Discrepancy_Form'
 import axios from 'axios'
 
 function App() {
+  const aircraftIds = ['62431656a7fb4be52a53a850']
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [formValue, setFormValue] = useState({
@@ -26,6 +27,7 @@ function App() {
 
   const getDiscrep = async () => {
     const res = await axios.get('http://localhost:3001/test')
+    console.log(res.data)
     setSearchResults(res.data)
   }
 
@@ -70,12 +72,13 @@ function App() {
             <Home
               value={searchQuery}
               handleSearchChange={handleSearchChange}
+              aircraftIds={aircraftIds}
               // onSubmit={getSearchResults}
             />
           }
         />
         <Route
-          path="/List_in_Section"
+          path="/List_in_Section/:id"
           element={<ListInSection searchResults={searchResults} />}
         />
         <Route path="/Details" />
