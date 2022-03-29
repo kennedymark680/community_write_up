@@ -94,7 +94,7 @@ function App() {
             />
           }
         />
-        <Route path="/Details/" />
+        <Route path="/Details/:id" />
         <Route
           path="/Discrepancy/:id"
           element={

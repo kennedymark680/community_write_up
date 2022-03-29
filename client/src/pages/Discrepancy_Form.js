@@ -1,10 +1,12 @@
 import { useParams } from 'react-router-dom'
+import Nav from '../components/Nav'
 
 const DiscrepancyForm = (props) => {
   const { id } = useParams()
 
   return (
     <div>
+      <Nav />
       <section className="input-section">
         <input
           className="form"
