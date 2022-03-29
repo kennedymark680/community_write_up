@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // Create the routes below
 
-app.get('/test', DiscrepancyController.getDiscrepancy)
+app.get('/list_in_section/:id', DiscrepancyController.getDiscrepancy)
 app.post('/post', DiscrepancyController.createDiscrepancy)
 app.delete('/delete/:id', DiscrepancyController.deleteDiscrepancy)
 app.put('/update/:id', DiscrepancyController.updateDiscrepancy)

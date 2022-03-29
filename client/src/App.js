@@ -20,8 +20,11 @@ function App() {
     image: ''
   })
 
-  const submitNewDiscrep = async () => {
-    await axios.post('http://localhost:3001/post', formValue)
+  const submitNewDiscrep = async (id) => {
+    await axios.post('http://localhost:3001/post', {
+      ...formValue,
+      aircraft: id
+    })
     console.log('test')
   }
 
@@ -33,10 +36,8 @@ function App() {
     setSearchResults(res.data)
   }
 
-  const deleteDiscrep = async () => {
-    const res = await axios.delete(
-      'http://localhost:3001/delete/62424aa1b14d681f749ce62f'
-    )
+  const deleteDiscrep = async (id) => {
+    const res = await axios.delete(`http://localhost:3001/delete/${id}`)
     console.log(res)
   }
 
@@ -85,12 +86,13 @@ function App() {
             <ListInSection
               searchResults={searchResults}
               getDiscrep={getDiscrep}
+              deleteDiscrep={deleteDiscrep}
             />
           }
         />
-        <Route path="/Details" />
+        <Route path="/Details/" />
         <Route
-          path="/Discrepancy"
+          path="/Discrepancy/:id"
           element={
             <DiscrepancyForm
               title={title}
