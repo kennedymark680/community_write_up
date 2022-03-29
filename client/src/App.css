@@ -26,3 +26,10 @@ button {
   width: 80px;
   height: 40px;
 }
+
+.card {
+  width: 75vw;
+  height: 20vh;
+  margin: 10px;
+  background-color: blue;
+}

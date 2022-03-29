@@ -25,8 +25,10 @@ function App() {
     console.log('test')
   }
 
-  const getDiscrep = async () => {
-    const res = await axios.get('http://localhost:3001/test')
+  const getDiscrep = async (aircraftId) => {
+    const res = await axios.get(
+      `http://localhost:3001/list_in_section/${aircraftId}`
+    )
     console.log(res.data)
     setSearchResults(res.data)
   }
@@ -79,7 +81,12 @@ function App() {
         />
         <Route
           path="/List_in_Section/:id"
-          element={<ListInSection searchResults={searchResults} />}
+          element={
+            <ListInSection
+              searchResults={searchResults}
+              getDiscrep={getDiscrep}
+            />
+          }
         />
         <Route path="/Details" />
         <Route
