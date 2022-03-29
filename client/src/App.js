@@ -6,6 +6,7 @@ import DiscrepancyForm from './pages/Discrepancy_Form'
 import axios from 'axios'
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState('')
   const [formValue, setFormValue] = useState({
     title: '',
     date: '',
@@ -38,7 +39,7 @@ function App() {
     console.log(res)
   }
 
-  const handleChange = (e) => {
+  const handleDiscrepancyChange = (e) => {
     const { name, value } = e.target
     const newValue = (prevState) => {
       return {
@@ -46,7 +47,14 @@ function App() {
         [name]: value
       }
     }
+
     setFormValue(newValue)
+  }
+
+  const handleSearchChange = (e) => {
+    const searchQuery = e.target
+    console.log(searchQuery.value)
+    return setSearchQuery(searchQuery.value)
   }
 
   const { title, date, aircraft, description, open, section, image } = formValue
@@ -54,7 +62,16 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              value={searchQuery}
+              handleSearchChange={handleSearchChange}
+              // onSubmit={getSearchResults}
+            />
+          }
+        />
         <Route path="/List_in_Section" />
         <Route path="/Details" />
         <Route
@@ -69,7 +86,7 @@ function App() {
               section={section}
               image={image}
               formValue={formValue}
-              handleChange={handleChange}
+              handleDiscrepancyChange={handleDiscrepancyChange}
               submitNewDiscrep={submitNewDiscrep}
               getDiscrep={getDiscrep}
               deleteDiscrep={deleteDiscrep}

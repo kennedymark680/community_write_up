@@ -8,7 +8,7 @@ const DiscrepancyForm = (props) => {
           name="title"
           placeholder="title"
           value={props.title}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <input
           className="form"
@@ -16,7 +16,7 @@ const DiscrepancyForm = (props) => {
           name="date"
           placeholder="Date"
           value={props.date}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <input
           className="form"
@@ -24,7 +24,7 @@ const DiscrepancyForm = (props) => {
           name="aircraft"
           placeholder="Tail Number"
           value={props.aircraft}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <input
           className="form"
@@ -32,7 +32,7 @@ const DiscrepancyForm = (props) => {
           name="description"
           placeholder="Description"
           value={props.description}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <input
           className="form"
@@ -40,7 +40,7 @@ const DiscrepancyForm = (props) => {
           name="open"
           placeholder="Open?"
           value={props.open}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <input
           className="form"
@@ -48,7 +48,7 @@ const DiscrepancyForm = (props) => {
           name="section"
           placeholder="Section"
           value={props.section}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <input
           className="form"
@@ -56,7 +56,7 @@ const DiscrepancyForm = (props) => {
           name="image"
           placeholder="Image"
           value={props.image}
-          onChange={props.handleChange}
+          onChange={props.handleDiscrepancyChange}
         />
         <button onClick={() => props.submitNewDiscrep()}>Submit</button>
         <button onClick={() => props.getDiscrep()}>Get</button>
