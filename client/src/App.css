@@ -4,9 +4,11 @@
   font-family: 'Jura';
 }
 
-.App {
+.home-page {
   background-color: rgb(16, 16, 16);
-  height: 100vh;
+}
+
+.App {
   color: white;
 }
 
@@ -14,6 +16,12 @@ nav {
   width: 100vw;
   height: 75px;
   background-color: #c4c4c3;
+}
+
+.home-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input-section {
@@ -56,6 +64,12 @@ link {
   text-decoration: none;
 }
 
+.helicopter {
+  left: 30%;
+  top: 40%;
+  animation: move 5s linear 2s infinite alternate;
+}
+
 @keyframes typing {
   from {
     width: 0;
@@ -65,15 +79,49 @@ link {
   }
 }
 
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
 .typed-out {
+  /* margin: 100px; */
+  margin-top: 100px;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  font-size: 1.6rem;
+  font-size: 2.6rem;
   width: 0;
-  /* height: 35px; */
+  height: 55px;
   animation: typing 1.2s steps(18, end) forwards;
 }
 
 .container {
   display: inline-block;
+}
+
+.shadow {
+  margin-top: 20px;
+  animation: shadow 5s linear 2s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    border-right: 0.15em solid orange;
+  }
+  50% {
+    border-right: none;
+  }
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
 }
