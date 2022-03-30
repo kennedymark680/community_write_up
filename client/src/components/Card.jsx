@@ -21,7 +21,7 @@ const Card = (props) => {
   return (
     <div className="card">
           <div className='image-wrapper'>
-          {/* <img src={props.image} alt='discrepancy'/> */}
+            <img src={props.image} alt='discrepancy'/>
           </div>
           <div className='card-content'>
             <h1>{props.title}</h1>
@@ -32,10 +32,9 @@ const Card = (props) => {
               <button className="card-Button" onClick={() => showDetails()}>Details</button>
             </div>
           </div>
-         
-      
     </div>
   )
 }
 
 export default Card
+
