@@ -60,6 +60,7 @@ button:hover {
   height: 20vh;
   margin: 10px;
   background-color: #c4c4c4;
+  border-radius: 4px;
 }
 
 link {

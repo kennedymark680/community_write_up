@@ -20,14 +20,19 @@ const Card = (props) => {
 
   return (
     <div className="card">
-
-          <h1>{props.title}</h1>
-          <h3>{props.date}</h3>
+          <div className='image-wrapper'>
           {/* <img src={props.image} alt='discrepancy'/> */}
-          <button className="card-Button" onClick={() => props.deleteDiscrep(props.id)}>Delete</button>
-          <button className="card-Button" onClick={() => props.updateDiscrep(props.id)}>{status}</button>
-          <button className="card-Button" onClick={() => showDetails()}>Details</button>
-
+          </div>
+          <div className='card-content'>
+            <h1>{props.title}</h1>
+            <h3>{props.date}</h3>
+            <div className='button-group'>
+              <button className="card-Button" onClick={() => props.deleteDiscrep(props.id)}>Delete</button>
+              <button className="card-Button" onClick={() => props.updateDiscrep(props.id)}>{status}</button>
+              <button className="card-Button" onClick={() => showDetails()}>Details</button>
+            </div>
+          </div>
+         
       
     </div>
   )
