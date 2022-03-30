@@ -5,6 +5,10 @@ const Home = (props) => {
   return (
     <div>
       <Nav />
+      <div className="container">
+        <h1 className="typed-out">Community Write-Up</h1>
+      </div>
+
       <img src="https://i.ibb.co/ry4zLrq/ec130.png" alt="ec130" border="0" />
       <input
         className="form"

@@ -1,5 +1,4 @@
 .App {
-  display: flex;
   background-color: rgb(16, 16, 16);
   height: 100vh;
   color: white;
@@ -38,4 +37,25 @@ button {
 
 link {
   text-decoration: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typed-out {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  font-size: 1.6rem;
+  width: 0;
+  animation: typing 1.2s steps(18, end) forwards;
+}
+
+.container {
+  display: inline-block;
 }
