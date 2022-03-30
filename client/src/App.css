@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+
+* {
+  font-family: 'Jura';
+}
+
 .App {
   background-color: rgb(16, 16, 16);
   height: 100vh;
@@ -26,6 +32,17 @@ input {
 button {
   width: 80px;
   height: 40px;
+  background-color: #c4c4c3;
+  border: #c4c4c3 solid 2px;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #ff4200;
+  border: #ff4200 solid 2px;
+  color: white;
+  transform: translateY(2px);
 }
 
 .card {
@@ -53,6 +70,7 @@ link {
   border-right: 0.15em solid orange;
   font-size: 1.6rem;
   width: 0;
+  /* height: 35px; */
   animation: typing 1.2s steps(18, end) forwards;
 }
 
