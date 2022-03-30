@@ -2,6 +2,7 @@ import Card from '../components/Card.jsx'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Nav from '../components/Nav'
+import AircraftBanner from '../components/AircraftBanner.jsx'
 
 const ListInSection = (props) => {
   let { id } = useParams()
@@ -11,10 +12,11 @@ const ListInSection = (props) => {
   }, [])
 
   return (
-    <div>
+    <div className="list_in_section">
       <Nav />
+      <AircraftBanner />
       <Link to={`/Discrepancy/${id}`}>
-        <button>Discrep?</button>
+        <button className="disButton">Add Discrepancy</button>
       </Link>
       {props.searchResults.map((dis) => (
         <Card
