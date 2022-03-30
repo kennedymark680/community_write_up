@@ -7,6 +7,7 @@
 
 .home-page {
   background-color: rgb(16, 16, 16);
+  min-height: 100vh;
 }
 
 .App {
@@ -58,7 +59,7 @@ button:hover {
   width: 75vw;
   height: 20vh;
   margin: 10px;
-  background-color: blue;
+  background-color: #c4c4c4;
 }
 
 link {
@@ -152,4 +153,16 @@ link {
   color: #4b4b4b;
   border: none;
   margin-top: 20px;
+}
+
+.list_in_section {
+  background-color: rgb(16, 16, 16);
+  min-height: 100vh;
+}
+
+button,
+.card-button {
+  background-color: #4b4b4b;
+  color: white;
+  border-radius: 2px;
 }
