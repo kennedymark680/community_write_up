@@ -128,23 +128,14 @@ link {
 
 .shadow {
   margin-top: 20px;
-  animation: shadow 5s linear 2s infinite alternate;
-}
-
-@keyframes blink {
-  0% {
-    border-right: 0.15em solid orange;
-  }
-  50% {
-    border-right: none;
-  }
+  animation: shadow 2.5s linear 2s infinite alternate;
 }
 
 @keyframes shadow {
   0% {
-    opacity: 0.5;
+    opacity: 0.2;
   }
-  50% {
+  100% {
     opacity: 1;
   }
 }
