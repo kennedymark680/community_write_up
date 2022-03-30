@@ -13,8 +13,11 @@ const ListInSection = (props) => {
 
   return (
     <div className="list_in_section">
-      <Nav />
       <AircraftBanner />
+      <div className="nav-container">
+        <Nav />
+        <Link to={`/Discrepancy/${id}`}></Link>
+      </div>
       <Link to={`/Discrepancy/${id}`}>
         <button className="disButton">Add Discrepancy</button>
       </Link>

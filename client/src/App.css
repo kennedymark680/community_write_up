@@ -5,7 +5,8 @@
   /* background-color: rgb(16, 16, 16); */
 }
 
-.home-page {
+.home-page,
+.details-page {
   background-color: rgb(16, 16, 16);
   min-height: 100vh;
 }
@@ -62,6 +63,7 @@ button:hover {
   max-width: 700px;
   width: 75vw;
   height: 20vh;
+  min-height: 200px;
   margin: 10px;
   background-color: #c4c4c4;
   border-radius: 4px;
@@ -150,6 +152,7 @@ link {
   font-size: 2.2rem;
   color: white;
   border: white solid 2px;
+  margin: 20px 0;
 }
 
 .list_in_section {
@@ -178,4 +181,20 @@ button,
   background-color: #4b4b4b;
   color: white;
   border-radius: 4px;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.details-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-image {
+  margin-top: 20px;
 }

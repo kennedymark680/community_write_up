@@ -6,7 +6,9 @@ const DiscrepancyForm = (props) => {
 
   return (
     <div>
-      <Nav />
+      <div className="nav-container">
+        <Nav />
+      </div>
       <section className="input-section">
         <input
           className="form"
