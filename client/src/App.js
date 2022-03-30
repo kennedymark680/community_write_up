@@ -95,7 +95,10 @@ function App() {
             />
           }
         />
-        <Route path="/Details/:id" element={<Details />} />
+        <Route
+          path="/Details/:id"
+          element={<Details searchResults={searchResults} />}
+        />
         <Route
           path="/Discrepancy/:id"
           element={
