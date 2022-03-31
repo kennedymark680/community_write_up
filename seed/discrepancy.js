@@ -7,19 +7,23 @@ const main = async () => {
     {
       title: 'Oil Leak',
       date: '03/25/22',
-      aircraft: 'N886MH',
+      tail_number: 'N886MH',
       description: `There's oil EVERYWHERE`,
       open: true,
-      image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg'
+      section: 'Engine',
+      image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg',
+      aircraft: '62431656a7fb4be52a53a850'
     },
     {
       title: 'Hydraulic Belt',
       date: '02/23/20',
-      aircraft: 'N852MH',
+      tail_number: 'N852MH',
       description:
         'Started up at the fuel farm to a HYD 2 light. Shutdown and saw this.',
       open: false,
-      image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg'
+      section: 'Hydraulic',
+      image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg',
+      aircraft: '62431656a7fb4be52a53a850'
     }
   ]
 
