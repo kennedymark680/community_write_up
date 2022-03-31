@@ -19,6 +19,7 @@ app.get('/list_in_section/:id', DiscrepancyController.getDiscrepancy)
 app.post('/post', DiscrepancyController.createDiscrepancy)
 app.delete('/delete/:id', DiscrepancyController.deleteDiscrepancy)
 app.put('/update/:id', DiscrepancyController.updateDiscrepancy)
+app.put('/maintenance_comment/:id', DiscrepancyController.addMaintenanceComment)
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 

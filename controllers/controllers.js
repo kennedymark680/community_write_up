@@ -43,6 +43,20 @@ const updateDiscrepancy = async (req, res) => {
   }
 }
 
+const addMaintenanceComment = async (req, res) => {
+  console.log(req.body)
+  const mxComment = req.body.maintenance_comment
+  const { id } = req.params
+  try {
+    const updated = await Discrepancy.findByIdAndUpdate(id, {
+      maintenance_comment: mxComment
+    })
+    return res.send(updated)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 // const updateDiscrepancy = async (req, res) => {
 //   try {
 //     const discrepancies = await Discrepancy.find()
@@ -56,5 +70,6 @@ module.exports = {
   createDiscrepancy,
   getDiscrepancy,
   deleteDiscrepancy,
-  updateDiscrepancy
+  updateDiscrepancy,
+  addMaintenanceComment
 }

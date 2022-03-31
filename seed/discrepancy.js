@@ -12,7 +12,8 @@ const main = async () => {
       open: true,
       section: 'Engine',
       image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg',
-      aircraft: '62431656a7fb4be52a53a850'
+      aircraft: '62431656a7fb4be52a53a850',
+      maintenance_comment: ''
     },
     {
       title: 'Hydraulic Belt',
@@ -23,7 +24,8 @@ const main = async () => {
       open: false,
       section: 'Hydraulic',
       image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg',
-      aircraft: '62431656a7fb4be52a53a850'
+      aircraft: '62431656a7fb4be52a53a850',
+      maintenance_comment: ''
     }
   ]
 

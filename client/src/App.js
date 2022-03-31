@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './App.css'
 import Home from './pages/Home'
@@ -8,17 +8,19 @@ import Details from './pages/Details'
 import axios from 'axios'
 
 function App() {
+  const navigate = useNavigate()
   const aircraftIds = ['62431656a7fb4be52a53a850']
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResults, setSearchResults] = useState([])
   const [formValue, setFormValue] = useState({
     title: '',
     date: '',
-    aircraft: '',
     description: '',
     open: '',
     section: '',
-    image: ''
+    image: '',
+    aircraft: '',
+    maintenance_comment: ''
   })
 
   const submitNewDiscrep = async (id) => {
@@ -29,11 +31,12 @@ function App() {
     setFormValue({
       title: '',
       date: '',
-      aircraft: '',
       description: '',
       open: '',
       section: '',
-      image: ''
+      image: '',
+      aircraft: '',
+      maintenance_comment: ''
     })
     console.log('Submitted')
   }
@@ -59,6 +62,19 @@ function App() {
     getDiscrep(aircraftIds)
   }
 
+  const addMaintenanceComment = async (id, acId) => {
+    const res = await axios.put(
+      `http://localhost:3001/maintenance_comment/${id}`,
+      {
+        ...formValue
+      }
+    )
+    setFormValue({ ...formValue, maintenance_comment: '' })
+    getDiscrep(acId)
+    // navigate(`/`)
+    console.log(res)
+  }
+
   const handleDiscrepancyChange = (e) => {
     const { name, value } = e.target
     const newValue = (prevState) => {
@@ -77,7 +93,16 @@ function App() {
     return setSearchQuery(searchQuery.value)
   }
 
-  const { title, date, aircraft, description, open, section, image } = formValue
+  const {
+    title,
+    date,
+    aircraft,
+    description,
+    open,
+    section,
+    image,
+    maintenance_comment
+  } = formValue
 
   return (
     <div className="App">
@@ -106,7 +131,14 @@ function App() {
         />
         <Route
           path="/Details/:id"
-          element={<Details searchResults={searchResults} />}
+          element={
+            <Details
+              searchResults={searchResults}
+              maintenance_comment={maintenance_comment}
+              handleDiscrepancyChange={handleDiscrepancyChange}
+              addMaintenanceComment={addMaintenanceComment}
+            />
+          }
         />
         <Route
           path="/Discrepancy/:id"
