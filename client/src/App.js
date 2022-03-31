@@ -71,7 +71,6 @@ function App() {
     )
     setFormValue({ ...formValue, maintenance_comment: '' })
     getDiscrep(acId)
-    // navigate(`/`)
     console.log(res)
   }
 
@@ -90,7 +89,13 @@ function App() {
   const handleSearchChange = (e) => {
     const searchQuery = e.target
     console.log(searchQuery.value)
-    return setSearchQuery(searchQuery.value)
+    setSearchQuery(searchQuery.value)
+  }
+
+  const getDiscrepBySearch = async (aircraft) => {
+    const res = await axios.put(
+      `http://localhost:3001/search?aircraft=${aircraft}`
+    )
   }
 
   const {

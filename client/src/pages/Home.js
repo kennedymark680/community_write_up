@@ -38,7 +38,9 @@ const Home = (props) => {
             value={props.searchQuery}
             onChange={props.handleSearchChange}
           />
-          <button onClick={() => console.log('Searched')}>Search</button>
+          <button onClick={() => props.getDiscrepBySearch(props.searchQuery)}>
+            Tail Number
+          </button>
         </div>
       </div>
     </div>
