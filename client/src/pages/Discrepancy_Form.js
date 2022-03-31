@@ -77,13 +77,18 @@ const DiscrepancyForm = (props) => {
           value={props.aircraft}
           onChange={props.handleDiscrepancyChange}
         />
-        <Link to={`/list_in_section/${id}`}>
-          <button onClick={() => props.submitNewDiscrep(id)}>Submit</button>
-        </Link>
-        <button onClick={() => props.getDiscrep()}>Get</button>
-        <button onClick={() => props.deleteDiscrep()}>Delete</button>
-        <button onClick={() => props.updateDiscrep()}>Update</button>
       </section>
+      <Link to={`/list_in_section/${id}`}>
+        <button
+          onClick={() => props.submitNewDiscrep(id)}
+          className="submit-discrep"
+        >
+          Submit
+        </button>
+      </Link>
+      {/* <button onClick={() => props.getDiscrep()}>Get</button>
+        <button onClick={() => props.deleteDiscrep()}>Delete</button>
+        <button onClick={() => props.updateDiscrep()}>Update</button> */}
     </div>
   )
 }
