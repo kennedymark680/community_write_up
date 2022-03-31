@@ -16,7 +16,6 @@ const Card = (props) => {
   const showDetails = () => navigate(`/Details/${props.id}`)
 
   checksStatus()
-  console.log(props.id)
 
   return (
     <div className="card">

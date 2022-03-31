@@ -10,8 +10,11 @@ import axios from 'axios'
 function App() {
   const navigate = useNavigate()
   const aircraftIds = ['62431656a7fb4be52a53a850']
+  const [aircraftArray, setAircraftArray] = useState([])
+  const [search, setSearch] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResults, setSearchResults] = useState([])
+  const [searchBarResults, setSearchBarResults] = useState([])
   const [formValue, setFormValue] = useState({
     title: '',
     date: '',
@@ -39,6 +42,16 @@ function App() {
       maintenance_comment: ''
     })
     console.log('Submitted')
+  }
+
+  useEffect(() => {
+    getAircraftId()
+  }, [])
+
+  const getAircraftId = async () => {
+    const res = await axios.get(`http://localhost:3001/aircraftIds`)
+    setAircraftArray(res.data)
+    // console.log(aircraftArray[0]._id)
   }
 
   const getDiscrep = async (aircraftId) => {
@@ -88,14 +101,18 @@ function App() {
 
   const handleSearchChange = (e) => {
     const searchQuery = e.target
-    console.log(searchQuery.value)
     setSearchQuery(searchQuery.value)
   }
 
   const getDiscrepBySearch = async (aircraft) => {
-    const res = await axios.put(
-      `http://localhost:3001/search?tail_number=${aircraft}`
-    )
+    if (searchQuery) {
+      const res = await axios.get(
+        `http://localhost:3001/search?tail_number=${aircraft}`
+      )
+      setSearchBarResults(res.data)
+      setSearch(true)
+      navigate(`/list_in_section/${aircraftIds}`)
+    }
   }
 
   const {
@@ -116,8 +133,11 @@ function App() {
           path="/"
           element={
             <Home
+              setSearch={setSearch}
               value={searchQuery}
               handleSearchChange={handleSearchChange}
+              aircraftArray={aircraftArray}
+              getDiscrepBySearch={getDiscrepBySearch}
               aircraftIds={aircraftIds}
               // onSubmit={getSearchResults}
             />
@@ -127,10 +147,12 @@ function App() {
           path="/List_in_Section/:id"
           element={
             <ListInSection
-              searchResults={searchResults}
+              search={search}
+              searchResults={search ? searchBarResults : searchResults}
               getDiscrep={getDiscrep}
               deleteDiscrep={deleteDiscrep}
               updateDiscrep={updateDiscrep}
+              setSearch={setSearch}
             />
           }
         />

@@ -1,7 +1,11 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Nav from '../components/Nav'
 
 const Home = (props) => {
+  useEffect(() => {
+    props.setSearch(false)
+  }, [])
   return (
     <div className="home-page">
       <Nav />
@@ -23,7 +27,7 @@ const Home = (props) => {
           className="shadow"
         />
         <div className="aircraft-buttons">
-          <Link to={`/list_in_section/${props.aircraftIds[0]}`}>
+          <Link to={`/list_in_section/${props.aircraftArray}`}>
             <button>EC130</button>
           </Link>
           <button>H300</button>
@@ -34,12 +38,13 @@ const Home = (props) => {
             className="form"
             type="text"
             name="search"
-            placeholder="Search"
+            placeholder="Tail Number"
             value={props.searchQuery}
             onChange={props.handleSearchChange}
           />
-          <button onClick={() => props.getDiscrepBySearch(props.searchQuery)}>
-            Tail Number
+
+          <button onClick={() => props.getDiscrepBySearch(props.value)}>
+            Search
           </button>
         </div>
       </div>
