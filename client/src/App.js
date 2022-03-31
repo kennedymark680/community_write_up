@@ -26,6 +26,15 @@ function App() {
       ...formValue,
       aircraft: id
     })
+    setFormValue({
+      title: '',
+      date: '',
+      aircraft: '',
+      description: '',
+      open: '',
+      section: '',
+      image: ''
+    })
     console.log('Submitted')
   }
 

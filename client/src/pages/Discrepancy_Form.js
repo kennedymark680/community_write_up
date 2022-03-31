@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import AircraftBanner from '../components/AircraftBanner'
 import Nav from '../components/Nav'
+import { Link } from 'react-router-dom'
 
 const DiscrepancyForm = (props) => {
   const { id } = useParams()
@@ -73,10 +74,12 @@ const DiscrepancyForm = (props) => {
           type="text"
           name="aircraft"
           placeholder="Aircraft"
-          value={props.image}
+          value={props.aircraft}
           onChange={props.handleDiscrepancyChange}
         />
-        <button onClick={() => props.submitNewDiscrep(id)}>Submit</button>
+        <Link to={`/list_in_section/${id}`}>
+          <button onClick={() => props.submitNewDiscrep(id)}>Submit</button>
+        </Link>
         <button onClick={() => props.getDiscrep()}>Get</button>
         <button onClick={() => props.deleteDiscrep()}>Delete</button>
         <button onClick={() => props.updateDiscrep()}>Update</button>
