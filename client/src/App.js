@@ -94,7 +94,7 @@ function App() {
 
   const getDiscrepBySearch = async (aircraft) => {
     const res = await axios.put(
-      `http://localhost:3001/search?aircraft=${aircraft}`
+      `http://localhost:3001/search?tail_number=${aircraft}`
     )
   }
 

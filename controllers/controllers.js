@@ -57,6 +57,17 @@ const addMaintenanceComment = async (req, res) => {
   }
 }
 
+const getSearch = async (req, res) => {
+  try {
+    const results = await Discrepancy.find({
+      tail_number: `${req.query.tail_number}`
+    })
+    return res.status(200).send(results)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 // const updateDiscrepancy = async (req, res) => {
 //   try {
 //     const discrepancies = await Discrepancy.find()
@@ -71,5 +82,6 @@ module.exports = {
   getDiscrepancy,
   deleteDiscrepancy,
   updateDiscrepancy,
-  addMaintenanceComment
+  addMaintenanceComment,
+  getSearch
 }
