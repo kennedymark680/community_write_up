@@ -29,17 +29,17 @@ const Home = (props) => {
           <button>H300</button>
           <button>BK117</button>
         </div>
-      </div>
-      <div className="search-section">
-        <input
-          className="form"
-          type="text"
-          name="search"
-          placeholder="Search"
-          value={props.searchQuery}
-          onChange={props.handleSearchChange}
-        />
-        <button onClick={() => console.log('Searched')}>Search</button>
+        <div className="search-section">
+          <input
+            className="form"
+            type="text"
+            name="search"
+            placeholder="Search"
+            value={props.searchQuery}
+            onChange={props.handleSearchChange}
+          />
+          <button onClick={() => console.log('Searched')}>Search</button>
+        </div>
       </div>
     </div>
   )
