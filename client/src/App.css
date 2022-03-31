@@ -6,7 +6,8 @@
 }
 
 .home-page,
-.details-page {
+.details-page,
+.form-page {
   background-color: rgb(16, 16, 16);
   min-height: 100vh;
 }
@@ -28,16 +29,27 @@ nav {
 }
 
 .input-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: orange;
-  width: 30vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  background-color: #4b4b4b;
+  width: 60vw;
+  height: 500px;
+  border-radius: 4px;
+  margin-top: 75px;
+  padding: 20px;
 }
 
 input {
   height: 50px;
+  width: 200px;
   margin: 10px;
+  border: #c4c4c4 solid 2px;
+  border-radius: 3px;
+}
+
+input::placeholder {
+  color: #ff4200;
 }
 
 button {
@@ -189,7 +201,8 @@ button,
   margin-top: 20px;
 }
 
-.details-page {
+.details-page,
+.form-page {
   display: flex;
   flex-direction: column;
   align-items: center;

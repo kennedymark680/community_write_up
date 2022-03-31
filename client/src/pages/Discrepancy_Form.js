@@ -1,13 +1,15 @@
 import { useParams } from 'react-router-dom'
+import AircraftBanner from '../components/AircraftBanner'
 import Nav from '../components/Nav'
 
 const DiscrepancyForm = (props) => {
   const { id } = useParams()
 
   return (
-    <div>
+    <div className="form-page">
       <div className="nav-container">
         <Nav />
+        <AircraftBanner />
       </div>
       <section className="input-section">
         <input
