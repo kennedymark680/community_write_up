@@ -42,6 +42,7 @@ const Details = ({
             onChange={handleDiscrepancyChange}
           />
           <button
+            className="maintenance-comment"
             onClick={() =>
               addMaintenanceComment(selectedDis[0]._id, selectedDis[0].aircraft)
             }
