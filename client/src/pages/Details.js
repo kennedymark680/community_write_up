@@ -31,7 +31,6 @@ const Details = ({
           <h3>{selectedDis[0].section}</h3>
           <h3>{selectedDis[0].description}</h3>
           <h3>{selectedDis[0].maintenance_comment}</h3>
-          <h3>{selectedDis[0].image}</h3>
         </div>
         <div className="maintenance_comment">
           <input

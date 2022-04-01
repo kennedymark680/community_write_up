@@ -224,3 +224,7 @@ button,
 .maintenance-comment {
   margin: 50px 0;
 }
+
+.details-info {
+  max-width: 650px;
+}

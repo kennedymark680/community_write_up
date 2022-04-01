@@ -5,17 +5,6 @@ const Aircraft = require('../models/aircraft')
 const main = async () => {
   const discrepancy = [
     {
-      title: 'Oil Leak',
-      date: '03/25/22',
-      tail_number: 'N886MH',
-      description: `There's oil EVERYWHERE`,
-      open: true,
-      section: 'Engine',
-      image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg',
-      aircraft: '62431656a7fb4be52a53a850',
-      maintenance_comment: ''
-    },
-    {
       title: 'Hydraulic Belt',
       date: '02/23/20',
       tail_number: 'N852MH',
@@ -24,19 +13,6 @@ const main = async () => {
       open: false,
       section: 'Hydraulic',
       image: 'https://i.ibb.co/p21WBB0/IMG-4408.jpg',
-      aircraft: '62431656a7fb4be52a53a850',
-      maintenance_comment: ''
-    },
-    {
-      title: 'Anti-Collision',
-      date: '05/14/20',
-      tail_number: 'N852MH',
-      description:
-        'Started up at the fuel farm to a HYD 2 light. Shutdown and saw this.',
-      open: false,
-      section: 'Body',
-      image:
-        'https://i.ibb.co/TLc9z2q/2-BB13-B7-A-809-F-46-FE-97-C2-33856-FDBCF24-1-105-c.jpg" alt="2-BB13-B7-A-809-F-46-FE-97-C2-33856-FDBCF24-1-105-c',
       aircraft: '62431656a7fb4be52a53a850',
       maintenance_comment: ''
     },
@@ -53,19 +29,7 @@ const main = async () => {
       aircraft: '62431656a7fb4be52a53a850',
       maintenance_comment: ''
     },
-    {
-      title: 'Hydraulic Cap',
-      date: '09/17/21',
-      tail_number: 'N862MH',
-      description:
-        'Found this on the left side of the transmission deck. The hydraulic fluid had just been serviced.',
-      open: false,
-      section: 'Hydraulic System',
-      image:
-        'https://i.ibb.co/m4DCsMP/4940-C8-BF-AF60-48-C0-B26-F-9-F0-DDDC22-BD2-1-105-c.jpg" alt="4940-C8-BF-AF60-48-C0-B26-F-9-F0-DDDC22-BD2-1-105-c',
-      aircraft: '62431656a7fb4be52a53a850',
-      maintenance_comment: ''
-    },
+
     {
       title: 'Friction Washer',
       date: '07/06/21',
@@ -113,6 +77,32 @@ const main = async () => {
       section: 'Airframe',
       image:
         'https://i.ibb.co/YfM7QNV/296-FA035-910-C-40-A2-99-DD-278-FBE0-E3495-1-201-a.jpg" alt="296-FA035-910-C-40-A2-99-DD-278-FBE0-E3495-1-201-a',
+      aircraft: '62431656a7fb4be52a53a850',
+      maintenance_comment: ''
+    },
+    {
+      title: 'Anti-Collision',
+      date: '05/14/20',
+      tail_number: 'N852MH',
+      description:
+        'Started up at the fuel farm to a HYD 2 light. Shutdown and saw this.',
+      open: false,
+      section: 'Body',
+      image:
+        'https://i.ibb.co/TLc9z2q/2-BB13-B7-A-809-F-46-FE-97-C2-33856-FDBCF24-1-105-c.jpg" alt="2-BB13-B7-A-809-F-46-FE-97-C2-33856-FDBCF24-1-105-c',
+      aircraft: '62431656a7fb4be52a53a850',
+      maintenance_comment: ''
+    },
+    {
+      title: 'Hydraulic Cap',
+      date: '09/17/21',
+      tail_number: 'N862MH',
+      description:
+        'Found this on the left side of the transmission deck. The hydraulic fluid had just been serviced.',
+      open: false,
+      section: 'Hydraulic System',
+      image:
+        'https://i.ibb.co/m4DCsMP/4940-C8-BF-AF60-48-C0-B26-F-9-F0-DDDC22-BD2-1-105-c.jpg" alt="4940-C8-BF-AF60-48-C0-B26-F-9-F0-DDDC22-BD2-1-105-c',
       aircraft: '62431656a7fb4be52a53a850',
       maintenance_comment: ''
     }

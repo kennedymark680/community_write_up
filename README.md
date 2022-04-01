@@ -12,7 +12,7 @@
 
 ### Description
 
-![image](https://www.linkpicture.com/q/Untitled_296.png)
+![image](https://i.ibb.co/fGh9m5V/Screen-Shot-2022-03-31-at-8-50-04-PM.png)
 
 Welcome to Community Write-Up, the place were you can view and share aircraft discrepancies with a community of pilots.
 
@@ -20,7 +20,7 @@ The goal of Community Write-Up is to improve the working knowledge of a communit
 
 Community Write-Up changes this, and changes the away information is shared. When a pilot sees a issue, they can post it to the webpage for everyone to see. Instead of only one issue for one pilot, now its one issue for every pilot to see. Your group will learn as a whole from each and ever circumstance.
 
-![Brocken_Belt](https://i.ibb.co/p21WBB0/IMG-4408.jpg)
+![Brocken_Belt](https://i.ibb.co/G5wgvP3/Screen-Shot-2022-03-31-at-8-54-16-PM.png)
 
 ---
 
@@ -31,18 +31,21 @@ Community Write-Up changes this, and changes the away information is shared. Whe
 3.  Mongoose
 4.  Express
 5.  Flexbox / Grid
+6.  KeyFrames
 
 ---
 
 ## **MVP**
 
-- [ ] Full CRUD
-- [ ] React
-- [ ] Mongoose/Express
-- [ ] 2 Schemas
-- [ ] Style
-- [ ] Deployed on Heroku
+- [x] Full CRUD
+- [x] React
+- [x] Mongoose/Express
+- [x] 2 Schemas
+- [x] Style
+- [x] Deployed on Heroku
 
 ---
 
 ### **Credits**
+
+#### Helicopter Picture: [Google Search](https://static.displate.com/857x1200/displate/2019-08-14/8807443b78fd079ad82409e22dd704ed_f8c89558849a36ab6c406a07acf76c9f.jpg)
