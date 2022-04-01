@@ -50,6 +50,7 @@ function App() {
   const getAircraftId = async () => {
     const res = await axios.get(`/aircraftIds`)
     setAircraftArray(res.data)
+    console.log(aircraftArray)
   }
 
   const getDiscrep = async (aircraftId) => {
