@@ -1,8 +1,12 @@
-# Community Write Up
+# Community Write-Up
 
 ### Date: 4/1/22
 
 ### By: Mark Kennedy
+
+---
+
+## [Community Write-Up](https://gentle-taiga-16602.herokuapp.com/)
 
 ---
 
@@ -35,6 +39,14 @@ Community Write-Up changes this, and changes the away information is shared. Whe
 
 ---
 
+## Lessons Learned
+
+- Project Management: Was able to identify the potential choke-points in the project, focused on solving them in the simplest form and expanded from there.
+
+- Time Management: Understood that having many features is great, but over committing yourself on a project isn't. I was able to budge time for the unexpected issues and focused on quality and not just quantity.
+
+---
+
 ## **MVP**
 
 - [x] Full CRUD
@@ -49,3 +61,5 @@ Community Write-Up changes this, and changes the away information is shared. Whe
 ### **Credits**
 
 #### Helicopter Picture: [Google Search](https://static.displate.com/857x1200/displate/2019-08-14/8807443b78fd079ad82409e22dd704ed_f8c89558849a36ab6c406a07acf76c9f.jpg)
+
+### CSS Typewriter Effect: [sitepoint](https://www.sitepoint.com/css-typewriter-effect/#:~:text=The%20Typewriter%20Effect%20Is%20Easy%20to%20Create&text=Here's%20the%20way%20the%20typewriter,%E2%80%9Ctypes%20out%E2%80%9D%20the%20text.)
