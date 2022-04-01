@@ -10,7 +10,7 @@ const Discrepancy = new Schema(
     open: { type: Boolean, required: false },
     section: { type: String, required: false },
     image: { type: String, required: false },
-    aircraft: { type: Schema.Types.ObjectId, ref: 'Aircraft' },
+    aircraft: { type: String, ref: 'Aircraft' },
     maintenance_comment: { type: String, required: false }
   },
   { timestamps: true }

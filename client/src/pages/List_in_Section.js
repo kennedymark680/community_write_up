@@ -9,13 +9,10 @@ const ListInSection = (props) => {
 
   useEffect(() => {
     if (props.search) {
-      console.log('test')
-      // props.setSearch(false)
       return null
     } else {
       props.getDiscrep(id)
     }
-    // props.search ? null : props.getDiscrep(id)
   }, [])
 
   return (

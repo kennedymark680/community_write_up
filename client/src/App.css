@@ -2,7 +2,6 @@
 
 * {
   font-family: 'Jura';
-  /* background-color: rgb(16, 16, 16); */
 }
 
 .home-page,
@@ -126,7 +125,6 @@ link {
 }
 
 .typed-out {
-  /* margin: 100px; */
   margin-top: 100px;
   overflow: hidden;
   border-right: 0.15em solid #ff9001;

@@ -10,10 +10,8 @@ const Details = ({
   addMaintenanceComment
 }) => {
   let { id } = useParams()
-  console.log(searchResults)
 
   let selectedDis = searchResults.filter((dis) => id === dis._id)
-  console.log(selectedDis[0])
   return (
     <div>
       <div className="details-page">

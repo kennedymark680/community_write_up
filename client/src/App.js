@@ -41,7 +41,6 @@ function App() {
       aircraft: '',
       maintenance_comment: ''
     })
-    console.log('Submitted')
   }
 
   useEffect(() => {
@@ -51,25 +50,20 @@ function App() {
   const getAircraftId = async () => {
     const res = await axios.get(`/aircraftIds`)
     setAircraftArray(res.data)
-    // console.log(aircraftArray[0]._id)
   }
 
   const getDiscrep = async (aircraftId) => {
     const res = await axios.get(`/list_in_section/${aircraftId}`)
-    console.log(res.data)
     setSearchResults(res.data)
-    console.log(searchResults)
   }
 
   const deleteDiscrep = async (id) => {
     const res = await axios.delete(`/delete/${id}`)
-    console.log(res)
     getDiscrep(aircraftIds)
   }
 
   const updateDiscrep = async (id) => {
     const res = await axios.put(`/update/${id}`)
-    console.log(res)
     getDiscrep(aircraftIds)
   }
 
@@ -79,7 +73,6 @@ function App() {
     })
     setFormValue({ ...formValue, maintenance_comment: '' })
     getDiscrep(acId)
-    console.log(res)
   }
 
   const handleDiscrepancyChange = (e) => {
@@ -132,7 +125,6 @@ function App() {
               aircraftArray={aircraftArray}
               getDiscrepBySearch={getDiscrepBySearch}
               aircraftIds={aircraftIds}
-              // onSubmit={getSearchResults}
             />
           }
         />
