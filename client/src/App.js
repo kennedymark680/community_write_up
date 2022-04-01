@@ -49,39 +49,34 @@ function App() {
   }, [])
 
   const getAircraftId = async () => {
-    const res = await axios.get(`http://localhost:3001/aircraftIds`)
+    const res = await axios.get(`/api/aircraftIds`)
     setAircraftArray(res.data)
     // console.log(aircraftArray[0]._id)
   }
 
   const getDiscrep = async (aircraftId) => {
-    const res = await axios.get(
-      `http://localhost:3001/list_in_section/${aircraftId}`
-    )
+    const res = await axios.get(`/api/list_in_section/${aircraftId}`)
     console.log(res.data)
     setSearchResults(res.data)
     console.log(searchResults)
   }
 
   const deleteDiscrep = async (id) => {
-    const res = await axios.delete(`http://localhost:3001/delete/${id}`)
+    const res = await axios.delete(`/api/delete/${id}`)
     console.log(res)
     getDiscrep(aircraftIds)
   }
 
   const updateDiscrep = async (id) => {
-    const res = await axios.put(`http://localhost:3001/update/${id}`)
+    const res = await axios.put(`/api/update/${id}`)
     console.log(res)
     getDiscrep(aircraftIds)
   }
 
   const addMaintenanceComment = async (id, acId) => {
-    const res = await axios.put(
-      `http://localhost:3001/maintenance_comment/${id}`,
-      {
-        ...formValue
-      }
-    )
+    const res = await axios.put(`/api/maintenance_comment/${id}`, {
+      ...formValue
+    })
     setFormValue({ ...formValue, maintenance_comment: '' })
     getDiscrep(acId)
     console.log(res)
@@ -106,9 +101,7 @@ function App() {
 
   const getDiscrepBySearch = async (aircraft) => {
     if (searchQuery) {
-      const res = await axios.get(
-        `http://localhost:3001/search?tail_number=${aircraft}`
-      )
+      const res = await axios.get(`/api/search?tail_number=${aircraft}`)
       setSearchBarResults(res.data)
       setSearch(true)
       navigate(`/list_in_section/${aircraftIds}`)
