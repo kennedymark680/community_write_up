@@ -59,7 +59,6 @@ const addMaintenanceComment = async (req, res) => {
 
 const getSearch = async (req, res) => {
   try {
-    console.log('test')
     const results = await Discrepancy.find({
       tail_number: `${req.query.tail_number}`
     })

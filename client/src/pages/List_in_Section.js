@@ -27,6 +27,7 @@ const ListInSection = (props) => {
       </Link>
       {props.searchResults.map((dis) => (
         <Card
+          key={dis._id}
           id={dis._id}
           title={dis.title}
           date={dis.date}

@@ -27,7 +27,7 @@ const Home = (props) => {
           className="shadow"
         />
         <div className="aircraft-buttons">
-          <Link to={`/list_in_section/${props.aircraftArray}`}>
+          <Link to={`/list_in_section/${props.aircraftIds}`}>
             <button>EC130</button>
           </Link>
           <button>H300</button>

@@ -7,11 +7,9 @@ import DiscrepancyForm from './pages/Discrepancy_Form'
 import Details from './pages/Details'
 import axios from 'axios'
 
-//62431656a7fb4be52a53a850
-
 function App() {
   const navigate = useNavigate()
-  const aircraftIds = ['624652387455163788d4933e']
+  const aircraftIds = ['62431656a7fb4be52a53a850']
   const [aircraftArray, setAircraftArray] = useState([])
   const [search, setSearch] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -53,6 +51,7 @@ function App() {
     const res = await axios.get(`/aircraftIds`)
     setAircraftArray(res.data)
   }
+  getAircraftId()
 
   const getDiscrep = async (aircraftId) => {
     const res = await axios.get(`/list_in_section/${aircraftId}`)
@@ -99,10 +98,8 @@ function App() {
       const res = await axios.get(`/search?tail_number=${aircraft}`)
       setSearchBarResults(res.data)
       setSearch(true)
-      navigate(`/list_in_section/${aircraftIds}`)
+      navigate(`/list_in_section/${aircraftArray[0]._id}`)
     }
-
-    console.log(aircraftArray)
   }
 
   const {
