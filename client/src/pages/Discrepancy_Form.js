@@ -32,9 +32,9 @@ const DiscrepancyForm = (props) => {
         <input
           className="form"
           type="text"
-          name="aircraft"
+          name="tail_number"
           placeholder="Tail Number"
-          value={props.aircraft}
+          value={props.tail_number}
           onChange={props.handleDiscrepancyChange}
         />
         <input
@@ -86,9 +86,6 @@ const DiscrepancyForm = (props) => {
           Submit
         </button>
       </Link>
-      {/* <button onClick={() => props.getDiscrep()}>Get</button>
-        <button onClick={() => props.deleteDiscrep()}>Delete</button>
-        <button onClick={() => props.updateDiscrep()}>Update</button> */}
     </div>
   )
 }
