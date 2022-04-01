@@ -101,7 +101,7 @@ function App() {
 
   const getDiscrepBySearch = async (aircraft) => {
     if (searchQuery) {
-      const res = await axios.get(`/api/search?tail_number=${aircraft}`)
+      const res = await axios.get(`/search?tail_number=${aircraft}`)
       setSearchBarResults(res.data)
       setSearch(true)
       navigate(`/list_in_section/${aircraftIds}`)
