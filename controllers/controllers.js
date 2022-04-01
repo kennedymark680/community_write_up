@@ -2,7 +2,6 @@ const Discrepancy = require('../models/discrepancy')
 const Aircraft = require('../models/aircraft')
 
 const createDiscrepancy = async (req, res) => {
-  console.log(req.data)
   try {
     const newDiscrepancy = await new Discrepancy(req.body)
     await newDiscrepancy.save()
